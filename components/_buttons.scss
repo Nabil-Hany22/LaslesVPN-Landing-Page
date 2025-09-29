@@ -1,13 +1,15 @@
 .button {
   width: 250px;
   height: 60px;
+  padding: 12px 0;
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-bold);
   background-color: var(--color-red);
   color: var(--color-white);
   border-radius: 10px;
   text-transform: capitalize;
-  transition: var(--transition-timing);
+  text-align: center;
+  transition: var(--alt-transition);
   &:hover {
     background-color: var(--color-red-bg);
   }
@@ -16,14 +18,16 @@
 .button-border {
   width: 177.87646484375px;
   height: 45px;
+  padding: 12px 0;
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-bold);
   border-radius: 50px;
-  border: 2px solid var(--color-red);
+  border: 1px solid var(--color-red);
   background-color: var(--color-white);
   color: var(--color-red);
   text-transform: capitalize;
-  transition: var(--transition-timing);
+  text-align: center;
+  transition: var(--alt-transition);
   &:hover{
     background-color:var(--color-red);
     color: var(--color-white);

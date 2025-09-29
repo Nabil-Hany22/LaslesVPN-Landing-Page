@@ -3,26 +3,25 @@
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
 }
 
-/* Large */
-@media (max-width: 1199px) {
+/* small */
+@media (min-width:768px) {
   .container {
-    width: 970px;
+      width: 750px;
   }
 }
 
 /* Medium */
-@media (max-width: 991px) {
+@media (min-width:992px) {
   .container {
-    width: 750px;
+      width: 970px;
   }
 }
 
-/* Small */
-@media (max-width: 767px) {
+/* Large */
+@media (min-width:1200px) {
   .container {
-    width: 100%; 
-  }
+      width: 1170px;
+  } 
 }
