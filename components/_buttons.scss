@@ -1,9 +1,10 @@
 .button {
   width: 250px;
   height: 60px;
-  padding: 12px 0;
+  padding: 1.75rem 7.75rem;
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-bold);
+  line-height: 25px;
   background-color: var(--color-red);
   color: var(--color-white);
   border-radius: 10px;
@@ -11,7 +12,10 @@
   text-align: center;
   transition: var(--alt-transition);
   &:hover {
-    background-color: var(--color-red-bg);
+    background-color: var(--color-white);
+    color: var(--color-red);
+  padding: 1.6rem 7rem;
+    border: 2px solid var(--color-red);
   }
 }
 

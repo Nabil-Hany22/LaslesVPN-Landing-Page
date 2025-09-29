@@ -13,6 +13,7 @@
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
+  --font-size-50: 5rem;
   --font-size-38: 3.8rem;
   --font-size-35: 3.5rem;
   --font-size-25: 2.5rem;
@@ -95,9 +96,10 @@ body {
 .button {
   width: 250px;
   height: 60px;
-  padding: 12px 0;
+  padding: 1.75rem 7.75rem;
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-bold);
+  line-height: 25px;
   background-color: var(--color-red);
   color: var(--color-white);
   border-radius: 10px;
@@ -106,7 +108,10 @@ body {
   transition: var(--alt-transition);
 }
 .button:hover {
-  background-color: var(--color-red-bg);
+  background-color: var(--color-white);
+  color: var(--color-red);
+  padding: 1.6rem 7rem;
+  border: 2px solid var(--color-red);
 }
 
 .button-border {
@@ -210,5 +215,91 @@ body {
   }
   .sign {
     display: none;
+  }
+}
+.hero {
+  margin: 9rem 0 0 0;
+  padding: 10rem 0;
+}
+.hero .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 4rem;
+}
+.hero .container .hero-text h1 {
+  line-height: 70px;
+  font-size: var(--font-size-50);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 20px;
+}
+.hero .container .hero-text h1 span {
+  font-weight: var(--font-weight-bold);
+}
+.hero .container p {
+  margin-bottom: 50px;
+  line-height: 30px;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-dark-grey-text);
+}
+.hero .container p span {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-medium);
+}
+.hero .container .button {
+  box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.7);
+}
+.hero .container .hero-image {
+  max-width: 600px;
+}
+.hero .container .hero-image img {
+  width: 100%;
+  position: relative;
+  animation: up-and-down 5s linear infinite;
+}
+
+@keyframes up-and-down {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+@media (max-width: 991px) {
+  .hero {
+    padding: 6rem 0;
+  }
+  .hero .container {
+    gap: 2.5rem;
+  }
+  .hero .container .hero-text h1 {
+    line-height: 50px;
+    font-size: 4rem;
+  }
+  .hero .container .button {
+    width: 70%;
+    padding: 1.75rem 4.75rem;
+  }
+  .hero .container .hero-image {
+    max-width: 450px;
+  }
+}
+@media (max-width: 767px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  .hero .container .hero-text h1 {
+    font-size: var(--font-size-38);
+    margin-bottom: 2.5rem;
+  }
+  .hero .container .hero-image {
+    margin-top: 1rem;
+    order: -1;
+    margin: auto;
   }
 }/*# sourceMappingURL=main.css.map */
