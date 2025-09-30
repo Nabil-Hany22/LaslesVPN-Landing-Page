@@ -1,0 +1,72 @@
+@use "../abstracts/media-mixins" as *;
+
+.features {
+  margin: 10rem auto;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 17rem;
+
+    .features-text {
+      h2 {
+        font-size: var(--font-size-35);
+        font-weight: var(--font-weight-medium);
+        margin-bottom: 2rem;
+        color: var(--color-black);
+      }
+      p {
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-regular);
+        margin-bottom: 2rem;
+        color: var(--color-dark-grey-text);
+        line-height: 3rem;
+      }
+
+      ul li {
+        font-size: var(--font-size-14);
+        font-weight: var(--font-weight-regular);
+        color: var(--color-dark-grey-text);
+        padding-top: 1.5rem;
+
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          content: "\f058";
+          font-weight: 900;
+          margin-right: 1rem;
+          color: #2fab73;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .features {
+    .container {
+      gap: 4rem;
+      .features-image {
+        img {
+          width: 100%;
+        }
+
+        .features-text {
+          width: 44%;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .features {
+    .container {
+      grid-template-columns: 1fr;
+      align-items: center;
+      margin: 0 auto;
+      .features-text {
+        margin: 0 2rem;
+      }
+    }
+  }
+}
