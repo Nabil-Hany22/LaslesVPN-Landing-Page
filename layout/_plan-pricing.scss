@@ -1,0 +1,103 @@
+@use "../abstracts/media-mixins" as *;
+@use "../base/global-styles" as *;
+
+.pricing {
+  margin: 10rem auto;
+  padding-bottom: 5rem;
+  background-color: var(--bg-color-grey);
+
+  .main-heading {
+    @extend %main-heading;
+  }
+
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: stretch;
+    gap: 3.2rem;
+    min-height: 760px;
+
+    .box {
+      background-color: var(--color-white);
+      border: 2px solid var(--border-color);
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.6rem;
+      padding: 0 6.4rem;
+      height: 100%;
+      transition: border var(--alt-transition);
+
+      &:hover {
+        border: 2px solid var(--color-red);
+      }
+
+      .box-image {
+        padding-top: 4.8rem;
+        flex-shrink: 0;
+        img {
+          max-width: 100%;
+        }
+      }
+
+      h3 {
+        font-size: var(--font-size-18);
+        font-weight: var(--font-weight-medium);
+        margin: 2.8rem auto;
+        flex-shrink: 0;
+      }
+
+      ul {
+        flex-grow: 1;
+        padding-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        li {
+          padding: 1.5rem 0;
+          font-size: var(--font-size-14);
+          font-weight: var(--font-weight-regular);
+          color: var(--color-dark-grey-text);
+          line-height: 1.4;
+          &::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f00c";
+            font-weight: 900;
+            margin-right: 1rem;
+            color: #2fab73;
+          }
+        }
+      }
+
+      .bottom-section {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        gap: 2rem;
+        flex-shrink: 0;
+        p {
+          position: relative;
+          font-size: var(--font-size-25);
+          font-weight: var(--font-weight-medium);
+          color: var(--color-black);
+          margin: 0;
+          text-align: center;
+          span {
+            font-weight: var(--font-weight-regular);
+            color: var(--color-dark-grey-text);
+          }
+        }
+
+        a {
+          margin: 0 auto 5rem;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+          transition: var(--alt-transition);
+          &:hover {
+            box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
