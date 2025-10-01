@@ -61,19 +61,19 @@
   color: var(--color-white);
 }
 
-.network .container .main-heading, .pricing .main-heading {
+.testimonials .container .main-heading, .network .container .main-heading, .pricing .main-heading {
   text-align: center;
   padding: 8rem 0 6rem;
   margin: auto;
 }
-.network .container .main-heading h3, .pricing .main-heading h3 {
+.testimonials .container .main-heading h3, .network .container .main-heading h3, .pricing .main-heading h3 {
   font-size: var(--font-size-35);
   font-weight: var(--font-weight-medium);
   color: var(--color-black);
   line-height: 5rem;
   margin-bottom: 2rem;
 }
-.network .container .main-heading p, .pricing .main-heading p {
+.testimonials .container .main-heading p, .network .container .main-heading p, .pricing .main-heading p {
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-regular);
   color: var(--color-dark-grey-text);
@@ -616,4 +616,122 @@ body {
 }
 .network .container .network-sponsers img {
   max-width: 100%;
+}
+
+.testimonials {
+  padding: 0 0 3rem;
+  background-color: white;
+}
+.testimonials .container .main-heading p span {
+  font-weight: var(--font-weight-medium);
+}
+.testimonials .container .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: stretch;
+  gap: 3.2rem;
+}
+.testimonials .container .cards .card {
+  background-color: var(--color-white);
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all var(--alt-transition);
+}
+.testimonials .container .cards .card:hover {
+  border: 2px solid var(--color-red);
+  transform: translateY(-1rem);
+}
+.testimonials .container .cards .card .head {
+  display: flex;
+  align-items: center;
+}
+.testimonials .container .cards .card .head .card-image img {
+  width: 100%;
+}
+.testimonials .container .cards .card .head .text {
+  margin-left: 2rem;
+}
+.testimonials .container .cards .card .head .text h3 {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0.5rem;
+}
+.testimonials .container .cards .card .head .text p {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-dark-grey-text);
+}
+.testimonials .container .cards .card .head .rate {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  margin-left: 5.5rem;
+}
+.testimonials .container .cards .card .head .rate i {
+  margin-left: 0.5rem;
+  color: #ffc107;
+}
+.testimonials .container .cards .card .body {
+  margin-top: 0.8rem;
+  max-width: 34rem;
+}
+.testimonials .container .cards .card .body p {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  line-height: 3rem;
+}
+.testimonials .container .slider-controls {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+.testimonials .container .slider-controls .dots {
+  display: flex;
+  gap: 1rem;
+}
+.testimonials .container .slider-controls .dot.active {
+  background-color: var(--color-red);
+}
+.testimonials .container .slider-controls .dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #dde0e4;
+  border-radius: 50%;
+  display: inline-block;
+}
+.testimonials .container .slider-controls .arrows {
+  display: flex;
+  gap: 2rem;
+}
+.testimonials .container .slider-controls .arrows .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 0.2rem solid var(--color-red);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: var(--font-size-18);
+  color: var(--color-red);
+  font-weight: bold;
+  transition: all var(--alt-transition) ease;
+}
+.testimonials .container .slider-controls .arrows .arrow:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+@media (max-width: 991px) {
+  .testimonials .container .cards .card .head .rate {
+    margin-left: 4.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials .container .cards .card .head .rate {
+    margin-left: 5.7rem;
+  }
 }/*# sourceMappingURL=main.css.map */

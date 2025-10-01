@@ -1,0 +1,161 @@
+@use "../abstracts/media-mixins" as *;
+@use "../base/global-styles" as *;
+
+.testimonials {
+  padding: 0 0 3rem;
+  background-color: white;
+
+  .container {
+    .main-heading {
+      @extend %main-heading;
+      p {
+        span {
+          font-weight: var(--font-weight-medium);
+        }
+      }
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      align-items: stretch;
+      gap: 3.2rem;
+
+      .card {
+        background-color: var(--color-white);
+        border: 2px solid var(--border-color);
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: all var(--alt-transition);
+
+        &:hover {
+          border: 2px solid var(--color-red);
+          transform: translateY(-1rem);
+        }
+
+        .head {
+          display: flex;
+          align-items: center;
+          .card-image {
+            img {
+              width: 100%;
+            }
+          }
+          .text {
+            margin-left: 2rem;
+            h3 {
+              font-size: var(--font-size-18);
+              font-weight: var(--font-weight-medium);
+              // line-height: 3rem;
+              margin-bottom: 0.5rem;
+            }
+            p {
+              font-size: var(--font-size-14);
+              font-weight: var(--font-weight-regular);
+              // line-height: 3rem;
+              color: var(--color-dark-grey-text);
+            }
+          }
+          .rate {
+            font-size: var(--font-size-16);
+            font-weight: var(--font-weight-regular);
+            margin-left: 5.5rem;
+
+            i {
+              margin-left: 0.5rem;
+              color: #ffc107;
+            }
+          }
+        }
+
+        .body {
+          margin-top: 0.8rem;
+          max-width: 34rem;
+          p {
+            font-size: var(--font-size-16);
+            font-weight: var(--font-weight-regular);
+            line-height: 3rem;
+          }
+        }
+      }
+    }
+    .slider-controls {
+      margin-top: 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 0;
+
+      .dots {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .dot.active {
+        background-color: var(--color-red);
+      }
+      .dot {
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: #dde0e4;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .arrows {
+        display: flex;
+        gap: 2rem;
+        .arrow {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 4rem;
+          height: 4rem;
+          border: 0.2rem solid var(--color-red);
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: var(--font-size-18);
+          color: var(--color-red);
+          font-weight: bold;
+          transition: all var(--alt-transition) ease;
+          &:hover {
+            background-color: var(--color-red);
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .testimonials {
+    .container {
+      .cards {
+        .card {
+          .head {
+            .rate {
+              margin-left: 4.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .testimonials {
+    .container {
+      .cards {
+        .card {
+          .head {
+            .rate {
+              margin-left: 5.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
