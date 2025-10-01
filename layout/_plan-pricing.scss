@@ -2,7 +2,7 @@
 @use "../base/global-styles" as *;
 
 .pricing {
-  margin: 10rem auto;
+  margin: 10rem auto 0px;
   padding-bottom: 5rem;
   background-color: var(--bg-color-grey);
 
@@ -95,6 +95,24 @@
           transition: var(--alt-transition);
           &:hover {
             box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include tablet {
+  .pricing{
+    .boxs{
+      .box{
+        .bottom-section{
+          width:65%;
+          a{
+            width: 100%;
+            font-size: var(--font-size-16);
+            padding: .4rem 0;
           }
         }
       }

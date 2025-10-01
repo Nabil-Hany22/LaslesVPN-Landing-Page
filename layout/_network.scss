@@ -1,0 +1,59 @@
+@use "../abstracts/media-mixins" as *;
+@use "../base/global-styles" as *;
+
+.network {
+  padding: 2rem 0 0;
+  background-color: var(--bg-color-grey);
+
+  .container {
+    .main-heading {
+      @extend %main-heading;
+      p {
+        span {
+          font-weight: var(--font-weight-medium);
+        }
+      }
+    }
+
+    .network-image {
+      position: relative;
+      display: inline-block;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .hover {
+        position: absolute;
+        inset: 0; /* top:0; right:0; bottom:0; left:0 */
+        opacity: 0;
+        transition: opacity var(--alt-transition) ease;
+      }
+
+      &:hover .hover {
+        opacity: 1;
+      }
+
+      &:hover .base {
+        opacity: 0;
+        transition: opacity var(--alt-transition) ease-out;
+      }
+    }
+
+    .network-sponsers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3.5rem;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 1rem;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+

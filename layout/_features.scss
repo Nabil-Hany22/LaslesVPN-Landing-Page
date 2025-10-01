@@ -7,6 +7,11 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 17rem;
+    .features-image {
+      img {
+        max-width: 100%;
+      }
+    }
 
     .features-text {
       h2 {
@@ -44,15 +49,15 @@
 @include tablet {
   .features {
     .container {
-      gap: 4rem;
+      gap: 5rem;
       .features-image {
         img {
           width: 100%;
         }
+      }
 
-        .features-text {
-          width: 44%;
-        }
+      .features-text {
+        width: 100%;
       }
     }
   }
