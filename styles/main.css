@@ -204,6 +204,10 @@ body {
   .header {
     font-size: 1.2rem;
   }
+  .header .container .navbar ul li {
+    padding: 1.6rem 0.5rem;
+    margin: 0 0.8rem;
+  }
   .header .sign a:first-child {
     padding: 1.4rem 1.5rem;
   }

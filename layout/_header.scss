@@ -51,7 +51,10 @@
 @include tablet {
   .header {
     font-size: 1.2rem;
-
+    .container .navbar ul li {
+      padding: 1.6rem 0.5rem;
+      margin: 0 0.8rem;
+    }
     .sign a:first-child {
       padding: 1.4rem 1.5rem;
     }
