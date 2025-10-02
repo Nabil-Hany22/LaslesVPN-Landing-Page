@@ -12,10 +12,9 @@
   text-align: center;
   transition: var(--alt-transition);
   &:hover {
-    background-color: var(--color-white);
-    color: var(--color-red);
+    background-color: #B80000;
+    color: var(--color-white);
   padding: 1.6rem 7rem;
-    border: .2rem solid var(--color-red);
   }
 }
 

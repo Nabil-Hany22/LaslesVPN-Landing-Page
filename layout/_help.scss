@@ -1,0 +1,88 @@
+@use "../abstracts/media-mixins" as *;
+
+.help {
+  position: relative;
+  z-index: 2;
+  .container {
+    margin: 40px auto -227.9px auto;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 7rem;
+    width: 114rem;
+    max-width: 100%;
+    box-shadow: 1px 3px 10px rgba(136, 136, 136, 0.4);
+    border-radius: 1rem;
+    .text {
+      max-width: 41rem;
+      h3 {
+        font-weight: var(--font-weight-medium);
+        font-size: var(--font-size-35);
+        line-height: 4.5rem;
+        margin-bottom: 2rem;
+        max-width: 371.61492919921875px;
+      }
+      p {
+        font-weight: var(--font-weight-regular);
+        font-size: var(--font-size-16);
+        line-height: 3rem;
+        color: var(--color-dark-grey-text);
+      }
+    }
+    .button {
+      box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.7);
+      padding: 1.75rem 6.3rem;
+      &:hover {
+        padding: 1.6rem 6.3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .help {
+    .container {
+      width: 90rem;
+    }
+  }
+}
+
+
+@media (max-width: 821px){
+    .help {
+        .container {
+          width: 77rem;
+          gap: 3rem;
+        }
+      }
+}
+
+@media (max-width: 768px){
+    .help {
+        .container {
+          width: 70rem;
+          padding: 3rem 4rem;
+          gap: 2rem;
+
+          .button {
+            padding: 1.75rem 3.3rem;
+            &:hover {
+              padding: 1.75rem 3.3rem;
+            }
+          }
+        }
+      }
+}
+
+
+@include mobile {
+    .help {
+      .container {
+        margin: 40px auto -256.9px auto;
+        width: 40rem;
+        flex-direction: column;
+        gap: 3rem;
+      }
+    }
+  }
