@@ -107,8 +107,8 @@
     text-align: center;
     padding: 1.2rem 0;
     margin-top: 40px;
-    background-color: var(--color-dark-grey-text);
-    color: white;
+    background-color: #eee;
+    color:var(--color-dark-grey-text);
     p{
         font-weight: var(--font-weight-medium);
         font-size: var(--font-size-18);
@@ -117,6 +117,7 @@
             color: #F53838;
         }
         a{
+    color:var(--color-black);
             font-weight: var(--font-weight-bold);
             font-size: var(--font-size-18);
             line-height: 3rem;
