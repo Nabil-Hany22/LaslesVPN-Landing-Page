@@ -430,6 +430,7 @@ body {
 }
 .features .container .features-image img {
   max-width: 100%;
+  animation: jump 5s infinite alternate ease-in-out;
 }
 .features .container .features-text h2 {
   font-size: var(--font-size-35);
@@ -458,6 +459,14 @@ body {
   color: #2fab73;
 }
 
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
 @media (max-width: 991px) {
   .features .container {
     gap: 5rem;
@@ -591,19 +600,20 @@ body {
 .network .container .network-image img {
   display: block;
   max-width: 100%;
+  transition: opacity var(--alt-transition) ease;
 }
 .network .container .network-image .hover {
   position: absolute;
   inset: 0; /* top:0; right:0; bottom:0; left:0 */
   opacity: 0;
-  transition: opacity var(--alt-transition) ease;
+  transition: opacity 0.6s ease;
 }
 .network .container .network-image:hover .hover {
   opacity: 1;
 }
 .network .container .network-image:hover .base {
   opacity: 0;
-  transition: opacity var(--alt-transition) ease-out;
+  transition: opacity var(--main-transition) ease-out;
 }
 .network .container .network-sponsers {
   display: flex;
@@ -615,6 +625,10 @@ body {
 }
 .network .container .network-sponsers img {
   max-width: 100%;
+  transition: all var(--main-transition);
+}
+.network .container .network-sponsers img:hover {
+  transform: scale(1.08);
 }
 
 .testimonials {
@@ -897,6 +911,7 @@ body {
 }
 .footer .container .footer-links .link-column ul li:hover {
   color: var(--color-red);
+  transform: translateX(5px);
 }
 .footer .footer-bottom {
   overflow-x: hidden;
@@ -912,7 +927,7 @@ body {
   line-height: 3rem;
 }
 .footer .footer-bottom p i {
-  color: #F53838;
+  color: #f53838;
 }
 .footer .footer-bottom p a {
   color: var(--color-black);

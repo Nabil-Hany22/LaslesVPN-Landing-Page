@@ -10,6 +10,7 @@
     .features-image {
       img {
         max-width: 100%;
+        animation: jump 5s infinite alternate ease-in-out;
       }
     }
 
@@ -43,6 +44,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10%);
   }
 }
 

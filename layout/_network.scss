@@ -22,13 +22,14 @@
       img {
         display: block;
         max-width: 100%;
+        transition: opacity var(--alt-transition) ease;
       }
 
       .hover {
         position: absolute;
         inset: 0; /* top:0; right:0; bottom:0; left:0 */
         opacity: 0;
-        transition: opacity var(--alt-transition) ease;
+        transition: opacity 0.6s ease;
       }
 
       &:hover .hover {
@@ -37,7 +38,7 @@
 
       &:hover .base {
         opacity: 0;
-        transition: opacity var(--alt-transition) ease-out;
+        transition: opacity var(--main-transition) ease-out;
       }
     }
 
@@ -51,9 +52,11 @@
 
       img {
         max-width: 100%;
+        transition: all var(--main-transition);
+        &:hover {
+          transform: scale(1.08);
+        }
       }
     }
   }
 }
-
-
